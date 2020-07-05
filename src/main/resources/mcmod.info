@@ -1,0 +1,15 @@
+[
+{
+  "modid": "statustags",
+  "name": "Status Tags",
+  "description": "Status Tags adds more information to player name tags",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Tschipp"],
+  "logoFile": "assets/statustags/textures/logo.png",
+  "screenshots": [],
+  "dependencies": []
+}
+]
