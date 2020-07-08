@@ -36,7 +36,7 @@ import tschipp.statustags.common.config.StatusTagsConfig;
 import tschipp.statustags.network.StatusUpdateChangeServer;
 
 @SideOnly(Side.CLIENT)
-@EventBusSubscriber
+@EventBusSubscriber(value = Side.CLIENT, modid = StatusTags.MODID)
 public class RenderEvents
 {
 
