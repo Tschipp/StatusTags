@@ -103,7 +103,7 @@ public class RenderEvents
 				else
 					return;
 			}
-			event.setCanceled(true);
+			event.setCanceled(true);			
 		}
 	}
 
@@ -181,10 +181,12 @@ public class RenderEvents
 			GlStateManager.scale(scale, scale, scale);
 		}
 
-		double width = StatusRenderHelper.getTagWidth(forPlayer.getName());
+		String name = forPlayer.getDisplayNameString();
+		
+		double width = StatusRenderHelper.getTagWidth(name);
 		double half = width / 2.0;
-		int middleWidth = StatusRenderHelper.getMiddleWidth(forPlayer.getName());
-		int stringWidth = mc.fontRenderer.getStringWidth(forPlayer.getName());
+		int middleWidth = StatusRenderHelper.getMiddleWidth(name);
+		int stringWidth = mc.fontRenderer.getStringWidth(name);
 
 		tex.bindTexture(TAG_TEXTURE);
 
@@ -231,7 +233,7 @@ public class RenderEvents
 
 		float[] hsb = Color.RGBtoHSB((int) (rgba[0] * 255), (int) (rgba[1] * 255), (int) (rgba[2] * 255), new float[3]);
 
-		mc.fontRenderer.drawString(forPlayer.getName(), -(stringWidth / 2) + 10, 7, hsb[2] > 0.5 ? 0 : 0xFFFFFF);
+		mc.fontRenderer.drawString(name, -(stringWidth / 2) + 10, 7, hsb[2] > 0.5 ? 0 : 0xFFFFFF);
 
 		GlStateManager.disableBlend();
 		GlStateManager.disableAlpha();
